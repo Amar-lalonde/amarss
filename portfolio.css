@@ -1,0 +1,176 @@
+/* =========================
+   RESET
+========================= */
+
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+body {
+    font-family: Arial, Helvetica, sans-serif;
+    background: linear-gradient(135deg, #eef2ff, #f8f9ff);
+    color: #111;
+    min-height: 100vh;
+}
+
+
+/* =========================
+   NAVBAR
+========================= */
+
+
+/* =========================
+   HERO SECTION
+========================= */
+
+.hero {
+    width: 90%;
+    max-width: 1100px;
+
+    min-height: 500px;
+
+    margin: 60px auto;
+
+    padding: 50px;
+
+    display: flex;
+    align-items: center;
+    justify-content: center;
+
+    gap: 70px;
+
+    background: white;
+
+    border-radius: 25px;
+
+    box-shadow:
+        0 15px 40px rgba(0, 0, 0, 0.12);
+
+    border: 1px solid #ddd;
+}
+
+
+/* =========================
+   PROFILE IMAGE
+========================= */
+
+.hr {
+    width: 320px;
+    height: 320px;
+
+    object-fit: cover;
+
+    border-radius: 50%;
+
+    border: 6px solid #25256b;
+
+    box-shadow:
+        0 10px 25px rgba(0, 0, 0, 0.25);
+
+    transition: 0.4s ease;
+}
+
+.hr:hover {
+    transform: scale(1.05);
+
+    border-color: #ffcc33;
+
+    box-shadow:
+        0 15px 35px rgba(0, 0, 0, 0.3);
+}
+
+
+/* =========================
+   INFORMATION
+========================= */
+
+.cr {
+    display: flex;
+
+    flex-direction: column;
+
+    gap: 15px;
+
+    min-width: 350px;
+}
+
+.cr h2 {
+    font-size: 21px;
+
+    color: #222;
+
+    background: #f4f5ff;
+
+    padding: 13px 18px;
+
+    border-left: 5px solid #25256b;
+
+    border-radius: 8px;
+
+    transition: 0.3s;
+}
+
+.cr h2:hover {
+    background: #fff4c7;
+
+    transform: translateX(5px);
+
+    border-left-color: #ffcc33;
+}
+
+
+/* =========================
+   RESPONSIVE TABLET
+========================= */
+
+
+
+    .hero {
+        width: 92%;
+
+        margin: 30px auto;
+
+        padding: 30px 20px;
+
+        flex-direction: column;
+
+        gap: 30px;
+
+        text-align: center;
+    }
+
+
+    /* IMAGE */
+
+    .hr {
+        width: 210px;
+        height: 210px;
+    }
+
+
+    /* INFORMATION */
+
+    .cr {
+        width: 100%;
+
+        min-width: 0;
+
+        gap: 12px;
+    }
+
+    .cr h2 {
+        font-size: 16px;
+
+        padding: 12px;
+
+        word-break: break-word;
+    }
+
+
+
+/* =========================
+   SMALL MOBILE
+========================= */
+

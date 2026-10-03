@@ -1,0 +1,338 @@
+```css
+/* =========================
+   RESET
+========================= */
+
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+body {
+    font-family: Arial, Helvetica, sans-serif;
+    background: linear-gradient(135deg, #eef2ff, #f8f9ff);
+    color: #111827;
+    min-height: 100vh;
+}
+
+
+/* =========================
+   HEADINGS
+========================= */
+
+.og {
+    text-align: center;
+    margin: 60px 0 35px;
+
+    font-size: clamp(30px, 5vw, 42px);
+    font-weight: 700;
+
+    color: #111133;
+
+    position: relative;
+}
+
+.og::after {
+    content: "";
+    display: block;
+
+    width: 70px;
+    height: 4px;
+
+    margin: 12px auto 0;
+
+    background: linear-gradient(90deg, #6366f1, #9333ea);
+
+    border-radius: 10px;
+}
+
+
+/* =========================
+   SKILLS SECTION
+========================= */
+
+.main1 {
+    width: 90%;
+    max-width: 1200px;
+
+    margin: auto;
+
+    display: grid;
+
+    grid-template-columns: repeat(4, 1fr);
+
+    gap: 25px;
+}
+
+
+/* Skill Cards */
+
+.main1 > div {
+    background: rgba(255, 255, 255, 0.9);
+
+    padding: 28px 22px;
+
+    text-align: center;
+
+    border-radius: 18px;
+
+    border: 1px solid rgba(99, 102, 241, 0.12);
+
+    box-shadow:
+        0 10px 30px rgba(31, 41, 55, 0.08);
+
+    transition: all 0.3s ease;
+}
+
+
+/* Hover Effect */
+
+.main1 > div:hover {
+    transform: translateY(-10px);
+
+    box-shadow:
+        0 18px 40px rgba(79, 70, 229, 0.18);
+
+    border-color: rgba(99, 102, 241, 0.3);
+}
+
+
+/* =========================
+   IMAGES
+========================= */
+
+.img1 {
+    width: 150px;
+    height: 150px;
+
+    max-width: 100%;
+
+    object-fit: contain;
+
+    display: block;
+
+    margin: 0 auto 20px;
+
+    border-radius: 12px;
+
+    transition: transform 0.3s ease;
+}
+
+
+/* Image hover */
+
+.main1 > div:hover .img1 {
+    transform: scale(1.08);
+}
+
+
+/* =========================
+   SKILL TEXT
+========================= */
+
+.main1 h2 {
+    margin-bottom: 12px;
+
+    font-size: 23px;
+
+    color: #111133;
+}
+
+.main1 p {
+    color: #5b6472;
+
+    font-size: 15px;
+
+    line-height: 1.7;
+}
+
+
+/* =========================
+   HOBBIES
+========================= */
+
+.owner {
+    width: 90%;
+    max-width: 1200px;
+
+    margin: auto;
+
+    padding-bottom: 60px;
+}
+
+.boss {
+    width: 100%;
+}
+
+
+/*
+   Your hobby images are directly
+   inside .div1, so make .div1
+   a responsive grid.
+*/
+
+.div1 {
+    display: grid;
+
+    grid-template-columns: repeat(4, 1fr);
+
+    gap: 25px;
+
+    padding: 0;
+}
+
+
+/* Hobby Images */
+
+.div1 .img1 {
+    width: 100%;
+    height: 230px;
+
+    object-fit: cover;
+
+    margin: 0;
+
+    background: white;
+
+    padding: 12px;
+
+    border-radius: 18px;
+
+    box-shadow:
+        0 10px 30px rgba(31, 41, 55, 0.10);
+
+    border: 1px solid rgba(99, 102, 241, 0.12);
+
+    transition: all 0.3s ease;
+}
+
+
+/* Hobby Hover */
+
+.div1 .img1:hover {
+    transform: translateY(-10px) scale(1.02);
+
+    box-shadow:
+        0 18px 40px rgba(79, 70, 229, 0.18);
+}
+
+
+/* =========================
+   TABLET
+========================= */
+
+@media (max-width: 1000px) {
+
+    .main1 {
+        grid-template-columns: repeat(2, 1fr);
+    }
+
+    .div1 {
+        grid-template-columns: repeat(2, 1fr);
+    }
+
+}
+
+
+/* =========================
+   MOBILE
+========================= */
+
+@media (max-width: 650px) {
+
+    body {
+        overflow-x: hidden;
+    }
+
+
+    /* Headings */
+
+    .og {
+        margin: 40px 0 25px;
+
+        font-size: 30px;
+    }
+
+
+    /* Skills */
+
+    .main1 {
+        width: 88%;
+
+        grid-template-columns: 1fr;
+
+        gap: 20px;
+    }
+
+
+    .main1 > div {
+        padding: 25px 18px;
+
+        border-radius: 16px;
+    }
+
+
+    .img1 {
+        width: 130px;
+        height: 130px;
+    }
+
+
+    .main1 p {
+        font-size: 14px;
+    }
+
+
+    /* Hobbies */
+
+    .owner {
+        width: 88%;
+    }
+
+    .div1 {
+        grid-template-columns: 1fr;
+
+        gap: 20px;
+    }
+
+
+    .div1 .img1 {
+        width: 100%;
+
+        height: 220px;
+
+        padding: 10px;
+    }
+
+}
+
+
+/* =========================
+   SMALL MOBILE
+========================= */
+
+@media (max-width: 400px) {
+
+    .og {
+        font-size: 27px;
+    }
+
+    .main1 {
+        width: 92%;
+    }
+
+    .owner {
+        width: 92%;
+    }
+
+    .main1 > div {
+        padding: 20px 15px;
+    }
+
+    .div1 .img1 {
+        height: 200px;
+    }
+
+}
+```
